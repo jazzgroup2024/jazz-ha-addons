@@ -1,0 +1,5 @@
+build_from:
+  aarch64: "ghcr.io/koenkk/zigbee2mqtt-aarch64:latest"
+  amd64: "ghcr.io/koenkk/zigbee2mqtt-amd64:latest"
+  armhf: "ghcr.io/koenkk/zigbee2mqtt-armhf:latest"
+  armv7: "ghcr.io/koenkk/zigbee2mqtt-armv7:latest"

@@ -1,0 +1,23 @@
+name: "Zigbee2MQTT #22"
+slug: "zigbee2mqtt_22"
+description: "Zigbee2MQTT Instance #22 for multi-coordinator setup"
+version: "1.42.0"
+url: "https://github.com/Koenkk/zigbee2mqtt"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+startup: application
+boot: auto
+init: false
+homeassistant: "0.115.0"
+stage: stable
+panel_icon: "mdi:zigbee"
+ingress: true
+ingress_port: 8112
+host_network: true
+usb: true
+uart: true
+schema: false
+image: "ghcr.io/koenkk/zigbee2mqtt-{arch}"
