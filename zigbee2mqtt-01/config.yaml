@@ -1,5 +1,5 @@
 name: "Zigbee2MQTT #Люсиновская"
-slug: "zigbee2mqtt_01"
+slug: "zigbee2mqtt_Люсиновская""
 description: "Zigbee2MQTT Instance #01 for multi-coordinator setup"
 version: "latest"
 url: "https://github.com/Koenkk/zigbee2mqtt"
