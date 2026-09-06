@@ -1,7 +1,7 @@
 name: "Zigbee2MQTT #14"
 slug: "zigbee2mqtt_14"
 description: "Zigbee2MQTT Instance #14 for multi-coordinator setup"
-version: "1.42.0"
+version: "latest"
 url: "https://github.com/Koenkk/zigbee2mqtt"
 arch:
   - aarch64
@@ -20,4 +20,4 @@ host_network: true
 usb: true
 uart: true
 schema: false
-image: "koenkk/zigbee2mqtt-{arch}"
+image: "koenkk/zigbee2mqtt"
