@@ -20,4 +20,4 @@ host_network: true
 usb: true
 uart: true
 schema: false
-image: "ghcr.io/koenkk/zigbee2mqtt-{arch}"
+image: "koenkk/zigbee2mqtt-{arch}"
