@@ -1,4 +1,4 @@
-name: "Zigbee2MQTT #01_lysi"
+name: "01_Lysi"
 slug: "zigbee2mqtt_01_lysi"
 description: "Zigbee2MQTT Instance #01 for multi-coordinator setup"
 version: "latest"
