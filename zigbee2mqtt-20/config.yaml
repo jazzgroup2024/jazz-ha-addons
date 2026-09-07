@@ -1,7 +1,7 @@
 name: "Zigbee2MQTT #20"
 slug: "zigbee2mqtt_20"
 description: "Zigbee2MQTT Instance #20 for multi-coordinator setup"
-version: "latest"
+version: "2.14.1"
 url: "https://github.com/Koenkk/zigbee2mqtt"
 arch:
   - aarch64

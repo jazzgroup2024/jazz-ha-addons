@@ -1,7 +1,7 @@
 name: "Zigbee2MQTT #06"
 slug: "zigbee2mqtt_06"
 description: "Zigbee2MQTT Instance #06 for multi-coordinator setup"
-version: "latest"
+version: "2.14.1"
 url: "https://github.com/Koenkk/zigbee2mqtt"
 arch:
   - aarch64
