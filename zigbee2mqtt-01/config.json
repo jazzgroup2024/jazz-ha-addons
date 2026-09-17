@@ -45,7 +45,7 @@
     "8091/tcp": "Frontend port for instance #01"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_01",
+    "data_path": "/config/01_lysiZ2MQTT",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_01,mode=777",
