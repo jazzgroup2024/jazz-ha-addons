@@ -54,7 +54,7 @@
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_01"
+      "base_topic": "01_lysiZ2MQTT"
     },
     "serial": {}
   },
