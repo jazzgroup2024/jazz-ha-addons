@@ -1,8 +1,8 @@
 {
-  "name": "30_Миронов",
+  "name": "31_Кусковская",
   "version": "2.14.1-1",
-  "slug": "zigbee2mqtt_30",
-  "description": "Zigbee2MQTT Instance #30 with isolated config folder and Web UI",
+  "slug": "zigbee2mqtt_31",
+  "description": "Zigbee2MQTT Instance #31 with isolated config folder and Web UI",
   "url": "https://github.com/Koenkk/zigbee2mqtt",
   "arch": [
     "aarch64",
@@ -37,22 +37,22 @@
     }
   ],
   "ports": {
-    "8430/tcp": null
+    "8431/tcp": null
   },
   "ports_description": {
-    "8430/tcp": "Socat tcp-listen port for instance #30"
+    "8431/tcp": "Socat tcp-listen port for instance #31"
   },
   "options": {
-    "data_path": "/config/z2m_mironovskaya",
+    "data_path": "/config/z2m_kuskovskaya",
     "socat": {
       "enabled": false,
-      "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_30,mode=777",
-      "slave": "tcp-listen:8430,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_31,mode=777",
+      "slave": "tcp-listen:8431,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "z2m_mironovskaya"
+      "base_topic": "z2m_kuskovskaya"
     },
     "serial": {}
   },

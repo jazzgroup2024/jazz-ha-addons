@@ -1,5 +1,5 @@
 {
-  "name": "29_Резерв",
+  "name": "29_БорПруды",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_29",
   "description": "Zigbee2MQTT Instance #29 with isolated config folder and Web UI",
@@ -43,7 +43,7 @@
     "8429/tcp": "Socat tcp-listen port for instance #29"
   },
   "options": {
-    "data_path": "/config/z2m_reserve_29",
+    "data_path": "/config/z2m_borprudy",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_29,mode=777",
@@ -52,7 +52,7 @@
       "log": false
     },
     "mqtt": {
-      "base_topic": "z2m_reserve_29"
+      "base_topic": "z2m_borprudy"
     },
     "serial": {}
   },

@@ -1,5 +1,5 @@
 {
-  "name": "28_Резерв",
+  "name": "28_Нижегород",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_28",
   "description": "Zigbee2MQTT Instance #28 with isolated config folder and Web UI",
@@ -43,7 +43,7 @@
     "8428/tcp": "Socat tcp-listen port for instance #28"
   },
   "options": {
-    "data_path": "/config/z2m_reserve_28",
+    "data_path": "/config/z2m_nishegorod",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_28,mode=777",
@@ -52,7 +52,7 @@
       "log": false
     },
     "mqtt": {
-      "base_topic": "z2m_reserve_28"
+      "base_topic": "z2m_nishegorod"
     },
     "serial": {}
   },
