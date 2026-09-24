@@ -1,6 +1,6 @@
 {
   "name": "07_Рублёвка",
-  "version": "2.14.1-2",
+  "version": "2.14.1-1",
   "slug": "zigbee2mqtt_07",
   "description": "Zigbee2MQTT Instance #07 with isolated config folder and Web UI",
   "url": "https://github.com/Koenkk/zigbee2mqtt",

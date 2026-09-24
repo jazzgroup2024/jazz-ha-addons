@@ -1,6 +1,6 @@
 {
   "name": "04_Кожух",
-  "version": "2.14.1-2",
+  "version": "2.14.1-1",
   "slug": "zigbee2mqtt_04",
   "description": "Zigbee2MQTT Instance #04 with isolated config folder and Web UI",
   "url": "https://github.com/Koenkk/zigbee2mqtt",
