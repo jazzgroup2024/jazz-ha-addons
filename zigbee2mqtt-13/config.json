@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #13",
+  "name": "13_Мартен",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_13",
   "description": "Zigbee2MQTT Instance #13 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8493/tcp": 8493,
-    "8103/tcp": null
+    "8413/tcp": null
   },
   "ports_description": {
-    "8493/tcp": "Socat tcp-listen port for instance #13",
-    "8103/tcp": "Frontend port for instance #13"
+    "8413/tcp": "Socat tcp-listen port for instance #13"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_13",
+    "data_path": "/config/z2m_martenovskaya",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_13,mode=777",
-      "slave": "tcp-listen:8493,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8413,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_13"
+      "base_topic": "z2m_martenovskaya"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.26.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

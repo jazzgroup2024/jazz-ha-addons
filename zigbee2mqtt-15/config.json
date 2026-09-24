@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #15",
+  "name": "15_Ленинград",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_15",
   "description": "Zigbee2MQTT Instance #15 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8495/tcp": 8495,
-    "8105/tcp": null
+    "8415/tcp": null
   },
   "ports_description": {
-    "8495/tcp": "Socat tcp-listen port for instance #15",
-    "8105/tcp": "Frontend port for instance #15"
+    "8415/tcp": "Socat tcp-listen port for instance #15"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_15",
+    "data_path": "/config/z2m_leningradskoe",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_15,mode=777",
-      "slave": "tcp-listen:8495,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8415,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_15"
+      "base_topic": "z2m_leningradskoe"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.28.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

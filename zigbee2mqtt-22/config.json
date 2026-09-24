@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #22",
+  "name": "22_Лобня",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_22",
   "description": "Zigbee2MQTT Instance #22 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8502/tcp": 8502,
-    "8112/tcp": null
+    "8422/tcp": null
   },
   "ports_description": {
-    "8502/tcp": "Socat tcp-listen port for instance #22",
-    "8112/tcp": "Frontend port for instance #22"
+    "8422/tcp": "Socat tcp-listen port for instance #22"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_22",
+    "data_path": "/config/z2m_lobna",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_22,mode=777",
-      "slave": "tcp-listen:8502,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8422,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_22"
+      "base_topic": "z2m_lobna"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.36.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

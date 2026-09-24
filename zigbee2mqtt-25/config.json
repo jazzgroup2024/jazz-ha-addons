@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #25",
+  "name": "25_Лазорев",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_25",
   "description": "Zigbee2MQTT Instance #25 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8505/tcp": 8505,
-    "8115/tcp": null
+    "8425/tcp": null
   },
   "ports_description": {
-    "8505/tcp": "Socat tcp-listen port for instance #25",
-    "8115/tcp": "Frontend port for instance #25"
+    "8425/tcp": "Socat tcp-listen port for instance #25"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_25",
+    "data_path": "/config/z2m_lazo",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_25,mode=777",
-      "slave": "tcp-listen:8505,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8425,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_25"
+      "base_topic": "z2m_lazo"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.39.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

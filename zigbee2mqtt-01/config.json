@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8481/tcp": 8481,
-    "8091/tcp": null
+    "8401/tcp": null
   },
   "ports_description": {
-    "8481/tcp": "Socat tcp-listen port for instance #01",
-    "8091/tcp": "Frontend port for instance #01"
+    "8401/tcp": "Socat tcp-listen port for instance #01"
   },
   "options": {
-    "data_path": "/config/01_lysiZ2MQTT",
+    "data_path": "/config/z2m_lucinovskaya",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_01,mode=777",
-      "slave": "tcp-listen:8481,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8401,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "01_lysiZ2MQTT"
+      "base_topic": "z2m_lucinovskaya"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.14.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

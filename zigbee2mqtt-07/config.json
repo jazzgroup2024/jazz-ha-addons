@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #07",
+  "name": "07_Рублёвка",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_07",
   "description": "Zigbee2MQTT Instance #07 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8487/tcp": 8487,
-    "8097/tcp": null
+    "8407/tcp": null
   },
   "ports_description": {
-    "8487/tcp": "Socat tcp-listen port for instance #07",
-    "8097/tcp": "Frontend port for instance #07"
+    "8407/tcp": "Socat tcp-listen port for instance #07"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_07",
+    "data_path": "/config/z2m_rublevskoe",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_07,mode=777",
-      "slave": "tcp-listen:8487,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8407,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_07"
+      "base_topic": "z2m_rublevskoe"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.20.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

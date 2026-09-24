@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #10",
+  "name": "10_Климаш",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_10",
   "description": "Zigbee2MQTT Instance #10 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8490/tcp": 8490,
-    "8100/tcp": null
+    "8410/tcp": null
   },
   "ports_description": {
-    "8490/tcp": "Socat tcp-listen port for instance #10",
-    "8100/tcp": "Frontend port for instance #10"
+    "8410/tcp": "Socat tcp-listen port for instance #10"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_10",
+    "data_path": "/config/z2m_klimashkina",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_10,mode=777",
-      "slave": "tcp-listen:8490,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8410,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_10"
+      "base_topic": "z2m_klimashkina"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.23.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

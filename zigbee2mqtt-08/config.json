@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #08",
+  "name": "08_Симфер",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_08",
   "description": "Zigbee2MQTT Instance #08 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8488/tcp": 8488,
-    "8098/tcp": null
+    "8408/tcp": null
   },
   "ports_description": {
-    "8488/tcp": "Socat tcp-listen port for instance #08",
-    "8098/tcp": "Frontend port for instance #08"
+    "8408/tcp": "Socat tcp-listen port for instance #08"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_08",
+    "data_path": "/config/z2m_simpheropol",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_08,mode=777",
-      "slave": "tcp-listen:8488,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8408,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_08"
+      "base_topic": "z2m_simpheropol"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.21.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

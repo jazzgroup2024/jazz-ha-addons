@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #19",
+  "name": "19_Рижский",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_19",
   "description": "Zigbee2MQTT Instance #19 with isolated config folder and Web UI",
@@ -37,26 +37,26 @@
     }
   ],
   "ports": {
-    "8499/tcp": 8499,
-    "8109/tcp": null
+    "8419/tcp": null
   },
   "ports_description": {
-    "8499/tcp": "Socat tcp-listen port for instance #19",
-    "8109/tcp": "Frontend port for instance #19"
+    "8419/tcp": "Socat tcp-listen port for instance #19"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_19",
+    "data_path": "/config/z2m_riga",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_19,mode=777",
-      "slave": "tcp-listen:8499,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8419,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_19"
+      "base_topic": "z2m_riga"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.33.190:8888"
+    }
   },
   "schema": {
     "data_path": "str",

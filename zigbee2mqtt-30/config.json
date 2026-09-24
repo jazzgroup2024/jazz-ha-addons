@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #30",
+  "name": "30_Резерв",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_30",
   "description": "Zigbee2MQTT Instance #30 with isolated config folder and Web UI",
@@ -37,24 +37,22 @@
     }
   ],
   "ports": {
-    "8510/tcp": 8510,
-    "8120/tcp": null
+    "8430/tcp": null
   },
   "ports_description": {
-    "8510/tcp": "Socat tcp-listen port for instance #30",
-    "8120/tcp": "Frontend port for instance #30"
+    "8430/tcp": "Socat tcp-listen port for instance #30"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_30",
+    "data_path": "/config/z2m_reserve_30",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_30,mode=777",
-      "slave": "tcp-listen:8510,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8430,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_30"
+      "base_topic": "z2m_reserve_30"
     },
     "serial": {}
   },

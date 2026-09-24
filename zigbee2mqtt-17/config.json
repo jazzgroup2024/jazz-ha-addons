@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #17",
+  "name": "17_Эйзен",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_17",
   "description": "Zigbee2MQTT Instance #17 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8497/tcp": 8497,
-    "8107/tcp": null
+    "8417/tcp": null
   },
   "ports_description": {
-    "8497/tcp": "Socat tcp-listen port for instance #17",
-    "8107/tcp": "Frontend port for instance #17"
+    "8417/tcp": "Socat tcp-listen port for instance #17"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_17",
+    "data_path": "/config/z2m_eizenschtein",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_17,mode=777",
-      "slave": "tcp-listen:8497,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8417,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_17"
+      "base_topic": "zm2_eizenschtein"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.31.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

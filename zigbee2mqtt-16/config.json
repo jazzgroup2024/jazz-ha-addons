@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #16",
+  "name": "16_Ульяна",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_16",
   "description": "Zigbee2MQTT Instance #16 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8496/tcp": 8496,
-    "8106/tcp": null
+    "8416/tcp": null
   },
   "ports_description": {
-    "8496/tcp": "Socat tcp-listen port for instance #16",
-    "8106/tcp": "Frontend port for instance #16"
+    "8416/tcp": "Socat tcp-listen port for instance #16"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_16",
+    "data_path": "/config/z2m_ulyana",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_16,mode=777",
-      "slave": "tcp-listen:8496,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8416,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_16"
+      "base_topic": "z2m_ulyana"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.30.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

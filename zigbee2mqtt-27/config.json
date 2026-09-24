@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #27",
+  "name": "27_Первомай",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_27",
   "description": "Zigbee2MQTT Instance #27 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8507/tcp": 8507,
-    "8117/tcp": null
+    "8427/tcp": null
   },
   "ports_description": {
-    "8507/tcp": "Socat tcp-listen port for instance #27",
-    "8117/tcp": "Frontend port for instance #27"
+    "8427/tcp": "Socat tcp-listen port for instance #27"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_27",
+    "data_path": "/config/z2m_pervomay",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_27,mode=777",
-      "slave": "tcp-listen:8507,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8427,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_27"
+      "base_topic": "z2m_pervomay"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.41.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

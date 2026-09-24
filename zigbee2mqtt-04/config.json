@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #04",
+  "name": "04_Кожух",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_04",
   "description": "Zigbee2MQTT Instance #04 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8484/tcp": 8484,
-    "8094/tcp": null
+    "8404/tcp": null
   },
   "ports_description": {
-    "8484/tcp": "Socat tcp-listen port for instance #04",
-    "8094/tcp": "Frontend port for instance #04"
+    "8404/tcp": "Socat tcp-listen port for instance #04"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_04",
+    "data_path": "/config/z2m_koshuhovskaya",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_04,mode=777",
-      "slave": "tcp-listen:8484,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8404,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_04"
+      "base_topic": "z2m_koshuhovskaya"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.17.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #12",
+  "name": "12_Шокаль",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_12",
   "description": "Zigbee2MQTT Instance #12 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8492/tcp": 8492,
-    "8102/tcp": null
+    "8412/tcp": null
   },
   "ports_description": {
-    "8492/tcp": "Socat tcp-listen port for instance #12",
-    "8102/tcp": "Frontend port for instance #12"
+    "8412/tcp": "Socat tcp-listen port for instance #12"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_12",
+    "data_path": "/config/z2m_shokalskogo",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_12,mode=777",
-      "slave": "tcp-listen:8492,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8412,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_12"
+      "base_topic": "z2m_shokalskogo"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.25.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

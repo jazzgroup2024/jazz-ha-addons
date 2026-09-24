@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #14",
+  "name": "14_Бажова",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_14",
   "description": "Zigbee2MQTT Instance #14 with isolated config folder and Web UI",
@@ -37,26 +37,26 @@
     }
   ],
   "ports": {
-    "8494/tcp": 8494,
-    "8104/tcp": null
+    "8414/tcp": null
   },
   "ports_description": {
-    "8494/tcp": "Socat tcp-listen port for instance #14",
-    "8104/tcp": "Frontend port for instance #14"
+    "8414/tcp": "Socat tcp-listen port for instance #14"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_14",
+    "data_path": "/config/z2m_bashova",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_14,mode=777",
-      "slave": "tcp-listen:8494,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8414,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_14"
+      "base_topic": "z2m_bashova"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.27.190:8888"
+    }
   },
   "schema": {
     "data_path": "str",

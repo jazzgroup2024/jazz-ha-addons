@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #03",
+  "name": "03_Нариман",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_03",
   "description": "Zigbee2MQTT Instance #03 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8483/tcp": 8483,
-    "8093/tcp": null
+    "8403/tcp": null
   },
   "ports_description": {
-    "8483/tcp": "Socat tcp-listen port for instance #03",
-    "8093/tcp": "Frontend port for instance #03"
+    "8403/tcp": "Socat tcp-listen port for instance #03"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_03",
+    "data_path": "/config/z2m_nariman",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_03,mode=777",
-      "slave": "tcp-listen:8483,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8403,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_03"
+      "base_topic": "z2m_nariman"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.16.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

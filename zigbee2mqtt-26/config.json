@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #26",
+  "name": "26_Дмитров",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_26",
   "description": "Zigbee2MQTT Instance #26 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8506/tcp": 8506,
-    "8116/tcp": null
+    "8426/tcp": null
   },
   "ports_description": {
-    "8506/tcp": "Socat tcp-listen port for instance #26",
-    "8116/tcp": "Frontend port for instance #26"
+    "8426/tcp": "Socat tcp-listen port for instance #26"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_26",
+    "data_path": "/config/z2m_dmitr",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_26,mode=777",
-      "slave": "tcp-listen:8506,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8426,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_26"
+      "base_topic": "z2m_dmitr"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.42.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

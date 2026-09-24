@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #21",
+  "name": "21_Илим",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_21",
   "description": "Zigbee2MQTT Instance #21 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8501/tcp": 8501,
-    "8111/tcp": null
+    "8421/tcp": null
   },
   "ports_description": {
-    "8501/tcp": "Socat tcp-listen port for instance #21",
-    "8111/tcp": "Frontend port for instance #21"
+    "8421/tcp": "Socat tcp-listen port for instance #21"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_21",
+    "data_path": "/config/z2m_ilim",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_21,mode=777",
-      "slave": "tcp-listen:8501,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8421,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_21"
+      "base_topic": "zm2_ilim"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.35.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

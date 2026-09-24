@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #23",
+  "name": "23_Волгоград",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_23",
   "description": "Zigbee2MQTT Instance #23 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8503/tcp": 8503,
-    "8113/tcp": null
+    "8423/tcp": null
   },
   "ports_description": {
-    "8503/tcp": "Socat tcp-listen port for instance #23",
-    "8113/tcp": "Frontend port for instance #23"
+    "8423/tcp": "Socat tcp-listen port for instance #23"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_23",
+    "data_path": "/config/z2m_Volgograd",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_23,mode=777",
-      "slave": "tcp-listen:8503,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8423,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_23"
+      "base_topic": "z2m_Volgograd"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.37.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

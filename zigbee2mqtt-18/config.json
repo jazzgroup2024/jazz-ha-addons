@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #18",
+  "name": "18_Пулкова",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_18",
   "description": "Zigbee2MQTT Instance #18 with isolated config folder and Web UI",
@@ -37,26 +37,26 @@
     }
   ],
   "ports": {
-    "8498/tcp": 8498,
-    "8108/tcp": null
+    "8418/tcp": null
   },
   "ports_description": {
-    "8498/tcp": "Socat tcp-listen port for instance #18",
-    "8108/tcp": "Frontend port for instance #18"
+    "8418/tcp": "Socat tcp-listen port for instance #18"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_18",
+    "data_path": "/config/z2m_pulkova",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_18,mode=777",
-      "slave": "tcp-listen:8498,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8418,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_18"
+      "base_topic": "z2m_pulkova"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.32.190:8888"
+    }
   },
   "schema": {
     "data_path": "str",

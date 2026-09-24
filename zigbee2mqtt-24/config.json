@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #24",
+  "name": "24_Воронеж",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_24",
   "description": "Zigbee2MQTT Instance #24 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8504/tcp": 8504,
-    "8114/tcp": null
+    "8424/tcp": null
   },
   "ports_description": {
-    "8504/tcp": "Socat tcp-listen port for instance #24",
-    "8114/tcp": "Frontend port for instance #24"
+    "8424/tcp": "Socat tcp-listen port for instance #24"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_24",
+    "data_path": "/config/z2m_Voronezh",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_24,mode=777",
-      "slave": "tcp-listen:8504,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8424,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_24"
+      "base_topic": "z2m_Voronezh"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.38.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",

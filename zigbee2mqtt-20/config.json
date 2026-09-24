@@ -1,5 +1,5 @@
 {
-  "name": "Zigbee2MQTT #20",
+  "name": "20_Свобода",
   "version": "2.14.1-1",
   "slug": "zigbee2mqtt_20",
   "description": "Zigbee2MQTT Instance #20 with isolated config folder and Web UI",
@@ -37,26 +37,27 @@
     }
   ],
   "ports": {
-    "8500/tcp": 8500,
-    "8110/tcp": null
+    "8420/tcp": null
   },
   "ports_description": {
-    "8500/tcp": "Socat tcp-listen port for instance #20",
-    "8110/tcp": "Frontend port for instance #20"
+    "8420/tcp": "Socat tcp-listen port for instance #20"
   },
   "options": {
-    "data_path": "/config/zigbee2mqtt_20",
+    "data_path": "/config/z2m_svoboda",
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M_20,mode=777",
-      "slave": "tcp-listen:8500,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8420,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
     "mqtt": {
-      "base_topic": "zigbee2mqtt_20"
+      "base_topic": "z2m_svoboda"
     },
-    "serial": {}
+    "serial": {
+      "port": "tcp://10.12.34.190:8888",
+      "adapter": "zstack"
+    }
   },
   "schema": {
     "data_path": "str",
