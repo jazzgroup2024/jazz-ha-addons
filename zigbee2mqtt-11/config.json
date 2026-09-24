@@ -12,7 +12,7 @@
   "boot": "auto",
   "init": false,
   "ingress": true,
-  "ingress_port": 8101,
+  "ingress_port": 8099,
   "panel_icon": "mdi:zigbee",
   "uart": true,
   "udev": true,
